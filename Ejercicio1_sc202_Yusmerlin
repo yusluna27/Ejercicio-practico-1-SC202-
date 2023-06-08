@@ -1,0 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication1;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author LABORATORIO 04
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+       int cantidadEmpleados = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de empleados : "));
+       double totalsem = 0;
+       double totalIvm = 0;
+      
+       
+       for (int i = 0; i < cantidadEmpleados; i++) {
+           double salario = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el salario del empleado"+i));
+           
+           
+           double sem = salario * 0.0925;
+           double ivm = salario * 0.0508;
+           
+           totalsem += sem;
+           totalIvm += ivm;
+       }
+       double totalPagar = totalsem + totalIvm;
+       
+        JOptionPane.showMessageDialog(null,"La empresa debera de abonar a la CCSS el monto de :"+totalPagar+"por cocepto de SEM y IVM");
+
+                   
+       }
+       
+        
+        
+        
+        
+    }
+    
+}
